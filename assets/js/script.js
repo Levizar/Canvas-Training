@@ -1,56 +1,65 @@
-// console.log("test")
-
-window.onload = () => {
 
 // le pendu
 let canvasPendu = document.getElementById("pendu");
 let ctxPendu = canvasPendu.getContext("2d");
 
-//bottom case
-
+//fond
 ctxPendu.beginPath();
-ctxPendu.moveTo( 0,0);
-ctxPendu.lineTo( 0, 400);
-ctxPendu.lineTo( 100, 400);
-ctxPendu.lineTo( 100, 0);
-ctxPendu.lineTo( 100, 0);
+ctxPendu.moveTo( 0, 400);
+ctxPendu.lineTo( 400, 400);
+ctxPendu.lineTo( 400, 390);
+ctxPendu.lineTo( 0, 390);
 ctxPendu.closePath();
-ctxPendu.strokeStyle = "black";
-ctxPendu.stroke();
-// ctxPendu.fillStyle = "black";
-// ctxPendu.fill();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
+//barre du milieu
+ctxPendu.beginPath();
+ctxPendu.moveTo(195,10);
+ctxPendu.lineTo(205,10);
+ctxPendu.lineTo(205,400);
+ctxPendu.lineTo(195,400);
+ctxPendu.closePath();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
+//soutien dessous gauche
+ctxPendu.beginPath();
+ctxPendu.moveTo(155,390);
+ctxPendu.lineTo(165,390);
+ctxPendu.lineTo(195,315);
+ctxPendu.lineTo(195,295);
+ctxPendu.closePath();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
-var c = document.getElementById('mon_canvas');
-var ctx = c.getContext("2d");
+//soutien dessous droite
+ctxPendu.beginPath();
+ctxPendu.moveTo(240,390);
+ctxPendu.lineTo(250,390);
+ctxPendu.lineTo(205,295);
+ctxPendu.lineTo(205,315);
+ctxPendu.closePath();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
-// Voile du bateau
-ctx.beginPath();      // Début du chemin
-ctx.moveTo(150,80);   // Le tracé part du point 150,80
-ctx.lineTo(300,230);  // Un segment est ajouté vers 300,230
-ctx.lineTo(150,230);  // Un segment est ajouté vers 150,230
-ctx.closePath();      // Fermeture du chemin
-ctx.fillStyle = "lightblue"; // Définition de la couleur de remplissage
-ctx.fill();           // Remplissage du dernier chemin tracé
+//barre du dessus
+ctxPendu.beginPath();
+ctxPendu.moveTo( 195, 0);
+ctxPendu.lineTo( 400, 0);
+ctxPendu.lineTo( 400, 10);
+ctxPendu.lineTo(195, 10);
+ctxPendu.closePath();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
-// Coque du bâteau
-ctx.beginPath();      // Début d'un autre chemin
-ctx.moveTo(50,250);
-ctx.lineTo(100,300);
-ctx.lineTo(250,300);
-ctx.lineTo(300,250);
-ctx.fillStyle = "peru";
-ctx.strokeStyle = "sienna"; // Définition de la couleur de contour
-ctx.lineWidth = 5;         // Définition de la largeur de ligne
-ctx.fill();            // Application du remplissage
-ctx.stroke();          // Application du contour
+//soutien du dessus
+ctxPendu.beginPath();
+ctxPendu.moveTo(240,10);
+ctxPendu.lineTo(250,10);
+ctxPendu.lineTo(205,115);
+ctxPendu.lineTo(205,90);
+ctxPendu.closePath();
+ctxPendu.fillStyle = "black";
+ctxPendu.fill();
 
-// Mât
-ctx.beginPath();
-ctx.moveTo(140,50);
-ctx.lineTo(140,250);
-ctx.lineWidth = 10;
-ctx.stroke();
-
-}
