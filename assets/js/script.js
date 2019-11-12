@@ -88,12 +88,41 @@ ctxPendu.stroke();
 
 // Oeil gauche
 ctxPendu.beginPath();
-ctxPendu.strokeStyle = "#369";
+ctxPendu.strokeStyle = "black";
 ctxPendu.fillStyle="#c00";
 ctxPendu.arc(380,110,5,0,Math.PI*2,false);
 ctxPendu.stroke();
 
 // Oeil droit
 ctxPendu.beginPath();
+ctxPendu.strokeStyle = "black";
+ctxPendu.fillStyle="#c00";
 ctxPendu.arc(410,110,5,0,Math.PI*2,false); 
 ctxPendu.stroke();
+
+
+// Def d'une fonction pour les lignes
+const line = (a,b) => {
+    ctxPendu.beginPath();
+    ctxPendu.moveTo(a[0], a[1]);
+    ctxPendu.lineTo(b[0], b[1]);
+    ctxPendu.strokeStyle = "black";
+    ctxPendu.lineWidth = 10;
+    ctxPendu.stroke();
+}
+
+//Corps
+line([395, 160], [395, 250])
+
+
+//Bras Gauche
+line([395, 170], [360, 230])
+
+//Bras droit
+line([395, 170],[430, 230])
+
+//Jambe Gauche
+line([395, 250], [370, 350])
+
+//Jambe droite
+line([395, 250], [420, 350])
