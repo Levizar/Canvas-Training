@@ -92,12 +92,18 @@ ctxPendu.strokeStyle = "black";
 ctxPendu.fillStyle="#c00";
 ctxPendu.arc(380,110,5,0,Math.PI*2,false);
 ctxPendu.stroke();
+ctxPendu.beginPath();
+ctxPendu.arc(380,110,1,0,Math.PI*2,false);
+ctxPendu.stroke();
 
 // Oeil droit
 ctxPendu.beginPath();
 ctxPendu.strokeStyle = "black";
 ctxPendu.fillStyle="#c00";
 ctxPendu.arc(410,110,5,0,Math.PI*2,false); 
+ctxPendu.stroke();
+ctxPendu.beginPath();
+ctxPendu.arc(410,110,1,0,Math.PI*2,false);
 ctxPendu.stroke();
 
 
@@ -113,7 +119,6 @@ const line = (a,b) => {
 
 //Corps
 line([395, 160], [395, 250])
-
 
 //Bras Gauche
 line([395, 170], [360, 230])
